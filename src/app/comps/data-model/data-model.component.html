@@ -1,0 +1,13 @@
+<!-- Para utilizar esta funcionalidade é necessario importar o modulo FormsModule no arquivo "app.module" ( import { FormsModule } from '@angular/forms'; 
+
+imports: [
+    BrowserModule,
+    FormsModule
+],
+    ) -->
+<div>
+    <h2>Two Way Data Binding:</h2>
+    <input type="text" [(ngModel)]="userName"
+    placeholder="digite seu nome">
+    <p>{{ userName }}</p>
+</div>
