@@ -1,6 +1,12 @@
 
+ <nav>
+    <a routerLink="/">Home</a>
+    <a routerLink="/list">List</a>
+    <a routerLink="/two-way-data-biding">Data Model</a>
+ </nav>
  <app-comp1 [userName]="userName" [userEmail]="'meuemail@gmail.com'"></app-comp1>  <!-- Compartilhando dados com os elementos filhos -->
- <app-diretivas></app-diretivas>
+ <!-- <app-diretivas></app-diretivas>
  <app-list-render></app-list-render>
  <app-pipe-operators></app-pipe-operators>
- <app-data-model></app-data-model>
+ <app-data-model></app-data-model> -->
+ <router-outlet></router-outlet>
