@@ -1,12 +1,25 @@
 
- <nav>
-    <a routerLink="/">Home</a>
-    <a routerLink="/list">List</a>
-    <a routerLink="/two-way-data-biding">Data Model</a>
+ <nav [ngStyle]="{'font-size':'20px' ,'display':'flex', 'justify-content':'space-around'}">
+   <!-- A diretiva routerLinkActiveOptions="{exact:true} serve para definir se o link ficará ativo somente quando o path é exatamente igual ao presente no link e não somente um trecho" -->
+    <a [routerLink]="['/']" [routerLinkActive]="['classe-link-ativo']" [routerLinkActiveOptions]="{exact:true}">Home</a> 
+    <a [routerLink]="['/list']" [routerLinkActive]="['classe-link-ativo']">List</a>
+    <a [routerLink]="['/two-way-data-biding']" [routerLinkActive]="['classe-link-ativo']">Data Model</a>
  </nav>
- <app-comp1 [userName]="userName" [userEmail]="'meuemail@gmail.com'"></app-comp1>  <!-- Compartilhando dados com os elementos filhos -->
+ <!-- Compartilhando dados com os elementos filhos -->
+ <app-comp1 [userName]="userName" [userEmail]="'meuemail@gmail.com'"></app-comp1>
+   
+ <app-ng-content [estilos]="{'border': '1px solid gold'}">
+   <p id="ngContent">este é um elemento externo inserido no componente</p>
+   <h1>este é um elemento externo que não será exibido no componente</h1>
+ </app-ng-content>
  <!-- <app-diretivas></app-diretivas>
  <app-list-render></app-list-render>
  <app-pipe-operators></app-pipe-operators>
  <app-data-model></app-data-model> -->
  <router-outlet></router-outlet>
+
+<div>
+   <h3>Life Cycle Hooks</h3>
+   <app-hooks entrada={{hookInput}}></app-hooks>
+   <button (click)="testarHook()" >Alterar valor</button>
+</div>

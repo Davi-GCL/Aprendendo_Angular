@@ -7,7 +7,8 @@ import { DataModelComponent } from "./comps/data-model/data-model.component";
 const routes: Routes = [
     {path: '', component: Comp1Component},
     {path: 'list', component: ListRenderComponent},
-    {path: 'two-way-data-biding', component: DataModelComponent}
+    {path: 'two-way-data-biding', component: DataModelComponent},
+    {path: '**', redirectTo:''}
 ]
 // Decorator que inclui as rotas na classe AppRoutingModule
 @NgModule({
