@@ -12,6 +12,8 @@ import { PipeOperatorsComponent } from './comps/pipe-operators/pipe-operators.co
 import { DataModelComponent } from './comps/data-model/data-model.component';
 import { HooksComponent } from './comps/life-cycle-hooks/hooks/hooks.component';
 import { NgContentComponent } from './comps/ng-content/ng-content.component';
+import { HooksPageComponent } from './comps/life-cycle-hooks/hooks-page/hooks-page.component';
+
 
 @NgModule({
   declarations: [ //Todos os componentes, diretivas e pipes que serao usados nesse modulo
@@ -23,7 +25,8 @@ import { NgContentComponent } from './comps/ng-content/ng-content.component';
     PipeOperatorsComponent,
     DataModelComponent,
     HooksComponent,
-    NgContentComponent
+    NgContentComponent,
+    HooksPageComponent,
   ],
   imports: [  //Importa outros "modulos"
     BrowserModule,

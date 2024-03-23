@@ -13,4 +13,5 @@
 
 - Executando o comando “ ng generate component <nome> ” , será criado um componente com dentro da pasta src/app/
 
--
+- ng generate component meu-modulo/meu-componente --module=meu-modulo/meu-modulo.module.ts para criar componentes associados a sub-modulos
+

@@ -2,8 +2,10 @@
  <nav [ngStyle]="{'font-size':'20px' ,'display':'flex', 'justify-content':'space-around'}">
    <!-- A diretiva routerLinkActiveOptions="{exact:true} serve para definir se o link ficará ativo somente quando o path é exatamente igual ao presente no link e não somente um trecho" -->
     <a [routerLink]="['/']" [routerLinkActive]="['classe-link-ativo']" [routerLinkActiveOptions]="{exact:true}">Home</a> 
-    <a [routerLink]="['/list']" [routerLinkActive]="['classe-link-ativo']">List</a>
+    <a [routerLink]="['/list']" [routerLinkActive]="['classe-link-ativo']">List Render</a>
     <a [routerLink]="['/two-way-data-biding']" [routerLinkActive]="['classe-link-ativo']">Data Model</a>
+    <a [routerLink]="['/hooks']" [routerLinkActive]="['classe-link-ativo']">Life Cycle Hooks</a>
+    <a [routerLink]="['/observables']" [routerLinkActive]="['classe-link-ativo']">Observables</a>
  </nav>
  <!-- Compartilhando dados com os elementos filhos -->
  <app-comp1 [userName]="userName" [userEmail]="'meuemail@gmail.com'"></app-comp1>
@@ -18,8 +20,3 @@
  <app-data-model></app-data-model> -->
  <router-outlet></router-outlet>
 
-<div>
-   <h3>Life Cycle Hooks</h3>
-   <app-hooks entrada={{hookInput}}></app-hooks>
-   <button (click)="testarHook()" >Alterar valor</button>
-</div>
